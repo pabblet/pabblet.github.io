@@ -1,0 +1,94 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Card from "../components/Card.astro"
+import Badge from "../components/Badge.astro"
+import SectionContainer from "../components/SectionContainer.astro"
+import SocialPill from "../components/SocialPill.astro"
+import MailIcon from "../components/icons/Mail.astro"
+import CVIcon from "../components/icons/CV.astro"
+import LinkedInIcon from "../components/icons/LinkedIn.astro"
+import GitHubIcon from "../components/icons/GitHub.astro"
+import StudiesIcon from "../components/icons/Studies.astro"
+import GalaxyIcon from "../components/icons/Galaxy.astro"
+import ProfileIcon from "../components/icons/ProfileCheck.astro"
+import CodeIcon from "../components/icons/Code.astro"
+import Education from "../components/Education.astro"
+import Projects from "../components/Projects.astro"
+import AboutMe from "../components/AboutMe.astro"
+---
+
+<Layout 
+  title="Pablo Saavedra - Astronomer in Development"
+  description="A Master's student at the University of Chile interested in study the variability of AGN."
+>
+
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <div class="flex gap-4 mb-4">
+        <img 
+          class="rounded-full size-28" 
+          src="/pablet.png" 
+          alt="Pablo photo"
+        />
+        
+        <a 
+          href="https://www.linkedin.com/in/pablo-saavedra-7461a531a/" 
+          target="_blank" 
+          rel="noopener" 
+          class="flex items-center transition md:justify-center md:hover:scale-105"
+        >
+          <Badge>Open to collaborate!</Badge>
+        </a>
+      </div>
+      <h1 class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white">
+        Hey, I'm Pablo
+      </h1>
+      <p class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-500 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300">
+        <strong>I'm a Master's student of Astronomy at the University of Chile.</strong> Currently my research interests are in the field of <span class="font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-700 dark:from-yellow-200 dark:via-yellow-400 dark:to-yellow-600">Active Galactic Nuclei</span>, specifically in the study of how these objects vary in time.
+      </p>
+
+      <nav class="flex gap-4 mt-8 flex-wrap">
+          <SocialPill href="mailto:pablosaavedra6@gmail.com">
+            <MailIcon class="size-4 md:size-6" />
+            Contact me!
+          </SocialPill>
+          <SocialPill href="/Pablo_Saavedra_CV.pdf" target="_blank" rel="noopener noreferrer">
+            <CVIcon class="size-4 md:size-6" />
+            CV
+          </SocialPill>
+          <SocialPill href="https://www.linkedin.com/in/pablo-saavedra-7461a531a/">
+            <LinkedInIcon class="size-4 md:size-6" />
+            LinkedIn
+          </SocialPill>
+          <SocialPill href="https://github.com/pabblet">
+            <GitHubIcon class="size-4 md:size-6" />
+            GitHub
+          </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="education">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center">
+        <StudiesIcon class="size-8" />
+        Education
+      </h2>
+      <Education />
+    </SectionContainer>
+
+    <SectionContainer id="projects">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center">
+        <GalaxyIcon class="size-8" />
+        Projects
+      </h2>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="about-me">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center">
+        <ProfileIcon class="size-8" />
+        About me
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+  </main>
+</Layout>

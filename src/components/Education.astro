@@ -1,0 +1,29 @@
+---
+import ExperienceItem from "./EducationItem.astro"
+const EXPERIENCE = [
+  {
+    date: "March 2024 — Present...",
+    title: "MSc. in Astronomy",
+    institution: "Universidad de Chile",
+    description:
+      "Thesis Project: Study of the reprocessing of accretion discs using Swift data and model-based timing analysis.",
+  },
+  {
+    date: "April 2020 — December 2023",
+    title: "BSc. in Astrophysics",
+    institution: "Universidad Técnica Federico Santa María",
+    description:
+      "Thesis Project: Measurement and analysis of the Halo Occupation Distribution in the SDSS.",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
